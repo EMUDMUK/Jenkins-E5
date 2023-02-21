@@ -7,7 +7,7 @@ podTemplate(
             args: '30d'
         ),
     ],
-    podRetention: 'OnFailure' // add pod retention on failure
+    podRetention onFailure()
 ) {
     node(POD_LABEL) {
         stage('Run pipeline against a gradle project') {
