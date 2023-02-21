@@ -1,3 +1,5 @@
+import org.csanchez.jenkins.plugins.kubernetes.pod.retention.PodRetention;
+
 podTemplate(
     containers: [
         containerTemplate(
