@@ -31,15 +31,13 @@ podTemplate(containers: [
                		    cd Chapter08/sample1
                 	    ./gradlew jacocoTestCoverageVerification
                         ./gradlew jacocoTestReport
+                        ./gradlew checkstyleMain
                         '''
                     } catch (Exception E) {
                         echo 'Failure detected'
                     }
               
-                    stage("Static code analysis") {
-                    steps {
-                    sh "./gradlew checkstyleMain"
-               }
+          
           }
                     // from the HTML publisher plugin
                     // https://www.jenkins.io/doc/pipeline/steps/htmlpublisher/
