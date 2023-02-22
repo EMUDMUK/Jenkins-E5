@@ -38,7 +38,6 @@ podTemplate(containers: [
                     }
               
           
-          }
                     // from the HTML publisher plugin
                     // https://www.jenkins.io/doc/pipeline/steps/htmlpublisher/
                     publishHTML (target: [
