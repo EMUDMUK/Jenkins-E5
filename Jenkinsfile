@@ -35,7 +35,12 @@ podTemplate(containers: [
                     } catch (Exception E) {
                         echo 'Failure detected'
                     }
-
+              
+                    stage("Static code analysis") {
+                    steps {
+                    sh "./gradlew checkstyleMain"
+               }
+          }
                     // from the HTML publisher plugin
                     // https://www.jenkins.io/doc/pipeline/steps/htmlpublisher/
                     publishHTML (target: [
